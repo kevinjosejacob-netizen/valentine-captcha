@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine CAPTCHA</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #ffe6f2; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 500px; margin: 20px auto; }
+    .grid img { width: 100%; border-radius: 8px; }
+    .buttons { margin-top: 20px; }
+    button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    #noBtn { position: relative; }
+  </style>
+</head>
+<body>
+  <h1>Verify you are my Valentine</h1>
+  <p>Select all images with our favorite memories.</p>
+  <div class="grid" id="imageGrid"></div>
+
+  <div class="buttons">
+    <p>Final step: Will you be my Valentine?</p>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn" onmouseover="moveNo()">No</button>
+  </div>
+
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
