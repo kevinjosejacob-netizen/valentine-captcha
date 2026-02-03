@@ -16,9 +16,13 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+    h1 {
+      margin-bottom: 20px;
+    }
     img {
       max-width: 90vw;
       max-height: 70vh;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -27,16 +31,16 @@
   <img id="celebrationGif" src="" alt="Celebration GIF">
 
   <script>
-    // List of GIF URLs (you can use Giphy links or your own files)
+    // List of celebration GIFs
     var gifs = [
-      "GIF_URL_1",
-      "GIF_URL_2",
-      "GIF_URL_3",
-      "GIF_URL_4"
+      "https://media.giphy.com/media/9wcu6Tr1ecmxa/giphy.gif",
+      "https://media.giphy.com/media/sywUEfI1Yl7Hcj6J5L/giphy.gif",
+      "https://media.giphy.com/media/lXiRnXRukC71MipmU/giphy.gif",
+      "https://media.giphy.com/media/OzcY9C5Oi8qKAnhh2d/giphy.gif"
     ];
 
-    // Pick one at random on each load
-    var randomIndex = Math.floor(Math.random() * gifs.length);  // standard pattern for random choice [web:100][web:104]
+    // Pick one at random and show it
+    var randomIndex = Math.floor(Math.random() * gifs.length);  /* common JS pattern for random array element [web:100][web:104] */
     var img = document.getElementById("celebrationGif");
     img.src = gifs[randomIndex];
   </script>
