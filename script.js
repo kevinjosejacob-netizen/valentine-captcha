@@ -1,15 +1,18 @@
-// 1) List your images here
+// 1) List your images here (real photos)
 var images = [
-  "https://placehold.co/300x300/ffb6c1/333?text=Photo+1",
-  "https://placehold.co/300x300/ffc0cb/333?text=Photo+2",
-  "https://placehold.co/300x300/fddde6/333?text=Photo+3",
-  "https://placehold.co/300x300/f9c5d5/333?text=Photo+4",
-  "https://placehold.co/300x300/fce4ec/333?text=Photo+5",
-  "https://placehold.co/300x300/ffe6f2/333?text=Photo+6",
-  "https://placehold.co/300x300/f8bbd0/333?text=Photo+7",
-  "https://placehold.co/300x300/f48fb1/333?text=Photo+8",
-  'https://placehold.co/300x300/ff99cc/333?text=Photo+9'
+  "images/IMG_2750.jpg",
+  "images/IMG_2752.jpg",
+  "images/IMG_4894.jpg",
+  "images/IMG_8590.jpg",
+  "images/IMG_8591.jpg",
+  "images/IMG_8595.jpg",
+  "images/IMG_9190.jpg",
+  "images/WhatsApp Image 2026-02-02 at 10.04.58 PM.jpeg",
+  "images/WhatsApp Image 2026-02-02 at 10.22.56 PM (1).jpeg",
+  "images/WhatsApp Image 2026-02-02 at 10.22.56 PM.jpeg",
+  "images/353f128b-f719-4225-a3f3-22f7bb3be86b.jpg"
 ];
+
 // 2) Pick 9 random images each load
 function getRandomImages(count) {
   var shuffled = images.slice().sort(() => 0.5 - Math.random());
@@ -36,12 +39,11 @@ function moveNo() {
   btn.style.transform = "translate(" + offsetX + "px," + offsetY + "px)";
 }
 
-// 5) Yes button click
+// 5) Yes button click -> go to GIF page
 document.addEventListener("DOMContentLoaded", function() {
   renderGrid();
   var yesBtn = document.getElementById("yesBtn");
-  var result = document.getElementById("result");
   yesBtn.addEventListener("click", function() {
-    result.textContent = "I knew you’d say yes ❤️";
+    window.location.href = "gif.html";
   });
 });
