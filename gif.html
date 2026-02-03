@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>One More Thing…</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    img {
+      max-width: 90vw;
+      max-height: 70vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>Now you’re officially my Valentine 💌</h1>
+  <img id="celebrationGif" src="" alt="Celebration GIF">
+
+  <script>
+    // List of GIF URLs (you can use Giphy links or your own files)
+    var gifs = [
+      "GIF_URL_1",
+      "GIF_URL_2",
+      "GIF_URL_3",
+      "GIF_URL_4"
+    ];
+
+    // Pick one at random on each load
+    var randomIndex = Math.floor(Math.random() * gifs.length);  // standard pattern for random choice [web:100][web:104]
+    var img = document.getElementById("celebrationGif");
+    img.src = gifs[randomIndex];
+  </script>
+</body>
+</html>
